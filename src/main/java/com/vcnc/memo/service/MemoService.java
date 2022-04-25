@@ -26,11 +26,10 @@ public class MemoService {
     public MemoResponseDto save(MemoSaveRequestDto memoSaveRequestDto) {
         Member member = memberRepository.findById(memoSaveRequestDto.getMemberId()).orElseThrow(() -> new NoSuchElementException("존재하지 않는 멤버id입니다."));
 
-        return new MemoResponseDto(memoRepository.save(Memo.builder()
-                .title(memoSaveRequestDto.getTitle())
-                .content(memoSaveRequestDto.getContent())
-                .member(member)
-                .build()));
+        Memo memo = Memo.createMemo(memoSaveRequestDto.getTitle(), memoSaveRequestDto.getContent(), member);
+        memoRepository.save(memo);
+
+        return new MemoResponseDto(memo);
     }
 
     @Transactional

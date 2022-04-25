@@ -21,7 +21,7 @@ public class MemoSaveRequestDto {
     @NotEmpty
     private String content;
 
-    @NotEmpty
+    @NotNull
     private Long memberId;
 
 }

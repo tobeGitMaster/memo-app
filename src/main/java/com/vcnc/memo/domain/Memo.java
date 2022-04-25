@@ -38,4 +38,15 @@ public class Memo extends BaseTimeEntity {
         this.content = content;
     }
 
+    public static Memo createMemo(String title, String content, Member member) {
+        Memo memo = Memo.builder()
+                .title(title)
+                .content(content)
+                .member(member)
+                .build();
+        member.getMemos().add(memo);
+
+        return memo;
+    }
+
 }
