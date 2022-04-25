@@ -19,3 +19,10 @@ Spring Boot로 메모장 API 백엔드 서비스 구현
 4. 제출 사항
 1) 코드를 github에 올린 후 그 링크를 전달
 2) 과제 진행에 소요된 순수 작업시간 기재
+
+5. 설명
+1) 개발 환경 : Spring Boot 2.4.1 + Spring Data JPA + H2 Database 
+2) 엔티티 구성 : Memo(메모), Member(사용자)
+3) 패키지 구성 : 컨트롤러, 서비스, 레포지토리, 도메인
+4) 기타 : MemoApplication.java에 샘플 DB 데이터 생성 로직 존재
+5) JUnit5로 MemoService계층 테스트
