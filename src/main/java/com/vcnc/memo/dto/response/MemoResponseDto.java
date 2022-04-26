@@ -1,4 +1,4 @@
-package com.vcnc.memo.dto.reponse;
+package com.vcnc.memo.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.vcnc.memo.domain.Memo;
